@@ -2,11 +2,15 @@ import styles from "./HomePage.module.css";
 import ExpenseTracker from "../../sections/ExpenseTracker/ExpenseTracker";
 import { useState, useEffect } from "react";
 import MyContext from "../../context";
+import RecentTransactions from "../../sections/RecentTransactions/RecentTransactions";
+
 
 export default function HomePage() {
   // walletBalance and expenses state
   const [walletBalance, setWalletBalance] = useState(0);
-  const [expenses, setExpenses] = useState(0);
+  const [expenses, setExpenses] = useState([]);
+  const [categories, setCategories] = useState(['Food', 'Entertainment', 'Travel']);
+
 
   //Setting wallet balance to 5k by default on first visit and saving to localStorage
   useEffect(() => {
@@ -29,7 +33,7 @@ export default function HomePage() {
 
   return (
     <MyContext.Provider
-      value={{ walletBalance, setWalletBalance, expenses, setExpenses }}
+      value={{ walletBalance, setWalletBalance, expenses, setExpenses, categories,setCategories }}
     >
       <div className={styles.container}>
         <ExpenseTracker />

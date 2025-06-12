@@ -1,0 +1,97 @@
+.container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 20px;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    padding: 25px 25px 20px 25px;
+}
+
+.transaction_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.expense_icon {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 350px;
+    justify-content: space-between;
+}
+
+.expense_name {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+.expense_name * {
+    margin: 0px;
+}
+
+.expense_price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.delete_edit_wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.button_wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 35px;
+    align-self: center;
+}
+
+.display_none {
+    display: none;
+}
+
+.button_hide {
+    display: none;
+}
+
+
+@media (min-width: 455px) {
+    .expense_icon {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 592px) {
+    .expense_icon {
+        width: fit-content;
+    }
+    .expense_price {
+        width: fit-content;
+    }
+    .expense_name {
+        text-align: start;
+    }
+}
