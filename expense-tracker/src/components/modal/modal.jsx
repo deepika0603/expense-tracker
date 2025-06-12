@@ -1,4 +1,5 @@
 import ReactModal from "react-modal";
+import AddIncomeModal from  "./Add_Income_modal/AddIncomeModal";
 
 export default function Modal({ isOpen, setOpen, type }) {
   return (
